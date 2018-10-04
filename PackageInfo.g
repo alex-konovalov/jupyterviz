@@ -28,14 +28,14 @@ SetPackageInfo( rec(
 
 PackageName := "Jupyter-Viz",
 Subtitle    := "Jupyter Notebook Visualization Tools",
-Version     := "1.0.0",
-Date        := "26/09/2018", # Release date of current version, dd/mm/yyyy
+Version     := "1.1.0",
+Date        := "04/10/2018", # Release date of current version, dd/mm/yyyy
 
 ##  Optional: if the package manual uses GAPDoc, you may duplicate the
 ##  version and the release date as shown below to read them while building
 ##  the manual using GAPDoc facilities to distibute documents across files.
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.0.0">
+##  <!ENTITY VERSION "1.1.0">
 ##  <!ENTITY RELEASEDATE "26 September 2018">
 ##  <#/GAPDoc>
 
@@ -83,8 +83,8 @@ PackageWWWHome   := "https://nathancarter.github.io/jupyter-viz",
 ##  Later, if this becomes part of GAP, use:
 ##  Concatenation( "https://gap-packages.github.io/", LowercaseString( ~.PackageName ) ),
 SourceRepository := rec( Type := "git",
-                         URL  := "http://nathancarter.github.io/jupyter-viz" ),
-IssueTrackerURL  := "https://github.com/nathancarter/jupyter-viz/issues",
+                         URL  := "http://github.com/nathancarter/jupyter-viz" ),
+IssueTrackerURL  := Concatenation( ~.SourceRepository.URL, "/issues" ),
 SupportEmail     := "ncarter@bentley.edu",
 README_URL       := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL   := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
@@ -98,7 +98,7 @@ PackageInfoURL   := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ##  example/init.g, ...    or example-3.3/init.g, ...  )
 ArchiveURL := Concatenation( ~.SourceRepository.URL,
                              "/releases/download/v", ~.Version,
-                             "/", ~.PackageName, "-", ~.Version ),
+                             "/jupyter-viz-", ~.Version ),
 ArchiveFormats := ".tar.gz",
 
 
